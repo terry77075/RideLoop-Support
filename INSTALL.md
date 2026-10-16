@@ -1,6 +1,6 @@
 # Install RideLoop Beta on Android
 
-> **Beta · Android only.** The current public stable beta is RideLoop v4.
+> **Beta · Android only.** The current public stable beta is RideLoop v14.
 
 ## Download
 
