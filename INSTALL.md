@@ -1,10 +1,10 @@
-# Install RideLoop Beta on Android
+# Install outabit Beta on Android
 
-> **Beta · Android only.** The current public stable beta is RideLoop v14.
+> **Beta · Android only.** The current public stable beta is outabit v14.
 
 ## Download
 
-[Download the latest RideLoop Beta (RideLoop-Beta.apk)](https://github.com/terry77075/RideLoop-Support/releases/download/beta-latest/RideLoop-Beta.apk)
+[Download the latest outabit Beta (RideLoop-Beta.apk)](https://github.com/terry77075/RideLoop-Support/releases/download/beta-latest/RideLoop-Beta.apk)
 
 If you opened this link inside email or chat, use **Open in browser** and continue in Chrome, Firefox, Edge, or Samsung Internet. Embedded viewers can block APK downloads.
 
@@ -22,6 +22,6 @@ Keep Play Protect and other Android protections enabled. If Android reports an u
 
 Download from the same link and install over the existing beta. **Do not uninstall first**, because uninstalling can remove local activity data. Before an update, keep copies of exported routes or activity information you cannot replace.
 
-- [RideLoop app help](https://terry77075.github.io/RideLoop-Support/support.html)
+- [outabit app help](https://terry77075.github.io/RideLoop-Support/support.html)
 - [Release details and checksum](https://github.com/terry77075/RideLoop-Support/releases/tag/beta-latest)
-- [Email support](mailto:rideloopsupport@gmail.com?subject=RideLoop%20Beta%20support)
+- [Email support](mailto:support@outabit.com?subject=outabit%20Beta%20support)
