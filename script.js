@@ -16,3 +16,80 @@ if ("IntersectionObserver" in window) {
   }, { rootMargin: "-35% 0px -45%", threshold: 0 });
   steps.forEach((step) => observer.observe(step));
 }
+
+const betaForm = document.querySelector("#beta-request-form");
+if (betaForm) {
+  const nameInput = betaForm.querySelector("#beta-name");
+  const activityInput = betaForm.querySelector("#beta-activity");
+  const deviceInputs = [...betaForm.querySelectorAll('input[name="device"]')];
+  const nameError = document.querySelector("#beta-name-error");
+  const deviceError = document.querySelector("#beta-device-error");
+  const status = document.querySelector("#beta-form-status");
+  const fallback = document.querySelector("#beta-email-fallback");
+  const mailtoAgain = document.querySelector("#beta-mailto-again");
+  const emailCopy = document.querySelector("#beta-email-copy");
+
+  const clearNameError = () => {
+    nameInput.setCustomValidity("");
+    nameInput.removeAttribute("aria-invalid");
+    nameError.textContent = "";
+  };
+
+  nameInput.addEventListener("input", clearNameError);
+  deviceInputs.forEach((input) => input.addEventListener("change", () => {
+    deviceInputs.forEach((deviceInput) => deviceInput.removeAttribute("aria-invalid"));
+    deviceError.textContent = "";
+  }));
+
+  betaForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    clearNameError();
+    deviceError.textContent = "";
+    status.textContent = "";
+
+    const name = nameInput.value.trim();
+    const selectedDevice = deviceInputs.find((input) => input.checked);
+
+    if (!name) {
+      nameInput.setCustomValidity("Please enter your name.");
+      nameInput.setAttribute("aria-invalid", "true");
+      nameError.textContent = "Enter your name before opening the email.";
+      nameInput.focus();
+      nameInput.reportValidity();
+      return;
+    }
+
+    if (!selectedDevice) {
+      deviceInputs.forEach((input) => input.setAttribute("aria-invalid", "true"));
+      deviceError.textContent = "Choose iPhone, Android, or Both.";
+      deviceInputs[0].focus();
+      deviceInputs[0].reportValidity();
+      return;
+    }
+
+    const activity = activityInput.value.trim();
+    const subject = `outabit beta access request — ${name}`;
+    const body = [
+      "Hi outabit team,",
+      "",
+      "I'd like to request beta access.",
+      "",
+      `Name: ${name}`,
+      `Device: ${selectedDevice.value}`,
+      `Favorite outdoor activity: ${activity || "Not provided"}`,
+      "",
+      "Please review my request."
+    ].join("\n");
+    const encodeMailtoPart = (value) => encodeURIComponent(value).replace(/[!'()*]/g, (character) => `%${character.charCodeAt(0).toString(16).toUpperCase()}`);
+    const mailto = `mailto:support@outabit.com?subject=${encodeMailtoPart(subject)}&body=${encodeMailtoPart(body)}`;
+
+    mailtoAgain.href = mailto;
+    emailCopy.value = `To: support@outabit.com\nSubject: ${subject}\n\n${body}`;
+    fallback.hidden = false;
+    status.textContent = "Your email draft is ready. Review it and press Send in your email app; the website has not sent anything automatically.";
+
+    window.setTimeout(() => {
+      window.location.href = mailto;
+    }, 120);
+  });
+}
