@@ -1,6 +1,6 @@
 # Install outabit Beta on Android
 
-> **Beta · Android only.** The current public stable beta is outabit v14.
+> **Beta · Android only.** The current public stable beta is outabit v26 (1.1, build 2026101226).
 
 ## Download
 
