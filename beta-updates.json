@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-21",
+  "publishApproved": true,
+  "platforms": [
+    {
+      "id": "iphone",
+      "label": "iPhone",
+      "installation": {
+        "summary": "Beta access is handled personally by the outabit team through TestFlight.",
+        "steps": [
+          "New tester? Request beta access below and follow the invitation sent by the outabit team.",
+          "Already testing? Open TestFlight, select outabit, and install the update offered to you. Look for build 54.",
+          "Keep the existing app installed when updating. If build 54 is not offered, contact support rather than deleting your app."
+        ],
+        "href": "#beta-request",
+        "linkLabel": "Request beta access"
+      },
+      "releases": [
+        {
+          "label": "Build 54",
+          "buildOrder": 54,
+          "date": "2026-10-21",
+          "dateLabel": "Status checked",
+          "status": "available",
+          "verified": true,
+          "added": [
+            "Customizable activities, so you can make outabit fit the way you get outside.",
+            "Improved Bluetooth connectivity."
+          ],
+          "fixed": [],
+          "knownIssues": [
+            "A build-specific known-issues list is not yet documented here. Please report anything unexpected."
+          ],
+          "testFocus": [
+            "Try your Bluetooth sensor: finding it, connecting, viewing readings, and reconnecting after it has been disconnected.",
+            "Try customizing activities, then check that your choices and existing outing history remain as expected."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "android",
+      "label": "Android",
+      "installation": {
+        "summary": "Ask the outabit team for beta access and the official Android installation instructions.",
+        "steps": [
+          "New tester? Request beta access below. Use only the official installer and instructions provided by the outabit team.",
+          "Already testing? Install the new beta over your existing beta app. Do not uninstall first, as this can remove local outings and settings.",
+          "Keep Android security protections enabled. Stop and contact support if you see an unexpected signing or package mismatch."
+        ],
+        "href": "#beta-request",
+        "linkLabel": "Request beta access"
+      },
+      "releases": [
+        {
+          "label": "v26 · version 1.1 · build 2026101226",
+          "buildOrder": 26,
+          "date": "2026-10-21",
+          "status": "available",
+          "verified": true,
+          "added": [
+            "Custom activities: add, rename, reorder, hide and restore activities, with independent goals and default screens. Hidden activities with outings remain in Stats.",
+            "Bluetooth sensor discovery now includes unnamed devices, merges duplicate advertisements, shows signal strength and sorts stronger signals first.",
+            "Compatibility clues distinguish previously connected sensors, likely compatible sensors and devices with unknown compatibility. Services are checked after you select Connect.",
+            "Long-press an activity on Home to customize it, with a direct return to Home."
+          ],
+          "fixed": [
+            "Normal Cancel no longer shows a misleading lost-sensor warning.",
+            "Empty Stats activity rows are omitted, and empty periods are explained."
+          ],
+          "knownIssues": [
+            "A build-specific known-issues list is not yet documented here. Please report anything unexpected."
+          ],
+          "testFocus": [
+            "Check sensor discovery, live readings and reconnect behavior with your own sensor.",
+            "Try customizing and hiding activities; verify that saved outings and settings remain intact after updating."
+          ],
+          "sourceUrl": "https://github.com/terry77075/RideLoop-Support/releases/tag/beta-latest"
+        },
+        {
+          "label": "Earlier beta · v4 · build 2026101204",
+          "buildOrder": 4,
+          "date": "2026-10-12",
+          "status": "available",
+          "verified": true,
+          "added": [
+            "Compact Settings with focused detail pages.",
+            "An explicit Save to Gallery action for outing images."
+          ],
+          "fixed": [
+            "Corrected Android native dependency packaging and retained the shared-object lifetime fix for asynchronous native calls."
+          ],
+          "knownIssues": null,
+          "sourceUrl": "https://github.com/terry77075/RideLoop-Support/releases/tag/RideLoop-Beta-1.1-20261012-v4"
+        }
+      ]
+    }
+  ]
+}

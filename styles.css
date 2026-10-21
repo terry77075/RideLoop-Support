@@ -405,3 +405,24 @@ footer p { margin: 0; }
   .promo-video { grid-template-columns: minmax(0, 1fr); }
   .promo-video-player { max-width: 360px; justify-self: center; }
 }
+
+.beta-updates { width: var(--content); margin: 0 auto; padding: clamp(4rem, 8vw, 7rem) 0; }
+.beta-updates h2 { font-size: clamp(2.7rem, 5.3vw, 5rem); margin-bottom: 1.4rem; }
+.beta-updates-intro { max-width: 740px; color: var(--muted); }
+.beta-platforms { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+.beta-platform { min-width: 0; padding: clamp(1.25rem, 3vw, 2rem); background: var(--cream); border: 1px solid var(--line); border-radius: var(--radius); }
+.beta-platform h3 { color: var(--navy); font-size: 1.65rem; margin-bottom: .75rem; }
+.beta-platform h4 { font-size: 1.15rem; margin: 1.5rem 0 .6rem; }
+.beta-platform h5 { font-size: 1rem; margin: 1.1rem 0 .4rem; }
+.beta-platform ul, .beta-platform ol { padding-left: 1.3rem; }
+.beta-platform li { margin: .4rem 0; }
+.beta-status { display: inline-block; padding: .2rem .65rem; border-radius: 999px; background: var(--sky-soft); color: var(--navy); font-weight: 800; font-size: .78rem; }
+.beta-status-development { background: var(--yellow); }
+.beta-release-meta { color: var(--muted); font-size: .9rem; }
+.beta-release + .beta-release { border-top: 1px solid var(--line); margin-top: 1.5rem; padding-top: .5rem; }
+.beta-platform details { border-top: 1px solid var(--line); padding-top: 1rem; margin-top: 1.5rem; }
+.beta-platform summary { cursor: pointer; font-weight: 800; color: var(--navy); }
+.beta-platform a { overflow-wrap: anywhere; text-underline-offset: 3px; }
+.beta-platform a:focus-visible, .beta-platform summary:focus-visible { outline: 3px solid var(--green-deep); outline-offset: 4px; }
+.beta-updates-footer { margin-top: 1.5rem; color: var(--muted); }
+@media (max-width: 760px) { .beta-platforms { grid-template-columns: minmax(0, 1fr); } }
