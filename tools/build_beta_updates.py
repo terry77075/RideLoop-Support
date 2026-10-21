@@ -63,6 +63,8 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--publish', action='store_true')
     args = parser.parse_args()
-    here = Path(__file__).parent
+    here = Path(__file__).resolve().parent
+    if here.name == 'tools':
+        here = here.parent
     data = json.loads((here/'beta-updates.json').read_text())
     (here/'beta-updates.fragment.html').write_text(render(data, args.publish))
