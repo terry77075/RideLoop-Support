@@ -9,7 +9,7 @@ def esc(value):
     return html.escape(str(value), quote=True)
 
 def safe_link(url):
-    if not (url.startswith('https://') or url.startswith('#')):
+    if not (url.startswith('https://') or url.startswith('#') or url.startswith('release-notes.html#')):
         raise ValueError('Only HTTPS or page anchors are permitted')
     return esc(url)
 
@@ -32,8 +32,8 @@ def release_card(release):
         out += bullets(title, release.get(key))
     if release.get('testFocus'):
         out += bullets('Please help test', release['testFocus'])
-    if release.get('sourceUrl'):
-        out += f'<p><a href="{safe_link(release["sourceUrl"])}">Full release notes</a></p>'
+    if release.get('notesUrl'):
+        out += f'<p><a href="{safe_link(release["notesUrl"])}">Full release notes</a></p>'
     return out + '</article>'
 
 def render(data, publish=False):

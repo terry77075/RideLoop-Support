@@ -76,7 +76,7 @@
             "Check sensor discovery, live readings and reconnect behavior with your own sensor.",
             "Try customizing and hiding activities; verify that saved outings and settings remain intact after updating."
           ],
-          "sourceUrl": "https://github.com/terry77075/RideLoop-Support/releases/tag/beta-latest"
+          "notesUrl": "release-notes.html#android-v26"
         },
         {
           "label": "Earlier beta · v4 · build 2026101204",
@@ -92,7 +92,7 @@
             "Corrected Android native dependency packaging and retained the shared-object lifetime fix for asynchronous native calls."
           ],
           "knownIssues": null,
-          "sourceUrl": "https://github.com/terry77075/RideLoop-Support/releases/tag/RideLoop-Beta-1.1-20261012-v4"
+          "notesUrl": "release-notes.html#android-v4"
         }
       ]
     }
