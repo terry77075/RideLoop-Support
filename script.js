@@ -28,6 +28,7 @@ if (betaForm) {
   const fallback = document.querySelector("#beta-email-fallback");
   const mailtoAgain = document.querySelector("#beta-mailto-again");
   const emailCopy = document.querySelector("#beta-email-copy");
+  let requestIsPrepared = false;
 
   const clearNameError = () => {
     nameInput.setCustomValidity("");
@@ -35,11 +36,32 @@ if (betaForm) {
     nameError.textContent = "";
   };
 
-  nameInput.addEventListener("input", clearNameError);
+  const invalidatePreparedRequest = () => {
+    if (!requestIsPrepared) return;
+    requestIsPrepared = false;
+    mailtoAgain.removeAttribute("href");
+    emailCopy.value = "";
+    fallback.hidden = true;
+    status.textContent = "Your answers changed. Prepare the email request again.";
+  };
+
+  nameInput.addEventListener("input", () => {
+    clearNameError();
+    invalidatePreparedRequest();
+  });
+  activityInput.addEventListener("input", invalidatePreparedRequest);
   deviceInputs.forEach((input) => input.addEventListener("change", () => {
     deviceInputs.forEach((deviceInput) => deviceInput.removeAttribute("aria-invalid"));
     deviceError.textContent = "";
+    invalidatePreparedRequest();
   }));
+
+  mailtoAgain.addEventListener("click", (event) => {
+    if (!requestIsPrepared || !mailtoAgain.hasAttribute("href")) {
+      event.preventDefault();
+      status.textContent = "Complete the required fields and prepare the email request first.";
+    }
+  });
 
   betaForm.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -53,7 +75,7 @@ if (betaForm) {
     if (!name) {
       nameInput.setCustomValidity("Please enter your name.");
       nameInput.setAttribute("aria-invalid", "true");
-      nameError.textContent = "Enter your name before opening the email.";
+      nameError.textContent = "Enter your name before preparing the email.";
       nameInput.focus();
       nameInput.reportValidity();
       return;
@@ -86,10 +108,8 @@ if (betaForm) {
     mailtoAgain.href = mailto;
     emailCopy.value = `To: support@outabit.com\nSubject: ${subject}\n\n${body}`;
     fallback.hidden = false;
-    status.textContent = "Your email draft is ready. Review it and press Send in your email app; the website has not sent anything automatically.";
-
-    window.setTimeout(() => {
-      window.location.href = mailto;
-    }, 120);
+    requestIsPrepared = true;
+    status.textContent = "Your email draft is ready. Tap Choose Gmail or Mail, then review it and press Send; the website has not sent anything automatically.";
+    mailtoAgain.focus();
   });
 }
