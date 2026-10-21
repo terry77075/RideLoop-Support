@@ -1,29 +1,168 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>outabit</title>
-  <style>
-    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;max-width:760px;margin:0 auto;padding:40px 22px;line-height:1.6;color:#1f2937;background:#f8fafc}
-    main{background:#fff;padding:34px;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,.06)}
-    h1{margin-top:0;font-size:2.2rem} h2{margin-top:2rem} a{color:#0b63ce}
-    nav{margin-top:28px;display:flex;gap:20px;flex-wrap:wrap}.tagline{font-size:1.15rem;color:#475569}.button{display:inline-block;background:#0b63ce;color:#fff;text-decoration:none;font-weight:700;padding:.8rem 1rem;border-radius:10px}
-    footer{margin-top:34px;color:#64748b;font-size:.9rem}
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="outabit is a friendly outdoor activity app for personal goals, route history, and outdoor memories.">
+  <title>outabit — get outside a bit</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<main>
-  <h1>outabit</h1>
-  <p class="tagline">A simple, privacy-focused GPS activity tracker for cycling, walking, hiking, kayaking, and everyday exploring.</p>
-  <p>outabit helps you record routes, distance, speed, active time, elevation, and other useful activity statistics while keeping the experience focused on your own activities rather than social feeds or advertising.</p>
-  <p><a class="button" href="install.html">Install the Android beta</a></p>
-  <nav>
-    <a href="install.html">Android Install Guide</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="support.html">Support</a>
-  </nav>
-  <footer>outabit</footer>
-</main>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="construction-notice" role="status">
+    <strong>Website under construction</strong>
+    <span>We’re building the full outabit site now. The Android beta is available by request.</span>
+  </div>
+  <header class="site-header">
+    <a class="brand brand-crop" href="#top" aria-label="outabit home"><img src="https://terry77075.github.io/app-downloads/outabit/assets/outabit-logo-light-background.png" alt="outabit"></a>
+    <nav aria-label="Primary navigation">
+      <a href="#how-it-works">How it works</a>
+      <a href="#tutorials">Tutorials</a>
+      <a href="#community">Community</a>
+    </nav>
+    <a class="button button-small" href="mailto:support@outabit.com?subject=outabit%20beta%20access%20request&amp;body=Hi%20outabit%20team%2C%0A%0AI%27d%20like%20to%20request%20beta%20access.%0A%0AName%3A%0ADevice%3A%0AFavorite%20outdoor%20activity%3A%0A">Request beta access</a>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> Android beta · access by request</p>
+        <h1>Get outside.<br><em>Just a bit.</em></h1>
+        <p class="hero-lede">A friendly way to make time for biking, walking, hiking, and kayaking—at your pace, on your terms.</p>
+        <div class="hero-actions">
+          <a class="button" href="mailto:support@outabit.com?subject=outabit%20beta%20access%20request&amp;body=Hi%20outabit%20team%2C%0A%0AI%27d%20like%20to%20request%20beta%20access.%0A%0AName%3A%0ADevice%3A%0AFavorite%20outdoor%20activity%3A%0A">Request beta access <span aria-hidden="true">→</span></a>
+          <a class="text-link" href="#how-it-works">See how it works <span aria-hidden="true">↓</span></a>
+        </div>
+        <p class="beta-note">Beta access is handled personally by the outabit team. There is no public download yet.</p>
+        <ul class="activity-list" aria-label="Supported activities">
+          <li><span aria-hidden="true">↗</span> Bike</li>
+          <li><span aria-hidden="true">⌁</span> Walk</li>
+          <li><span aria-hidden="true">△</span> Hike</li>
+          <li><span aria-hidden="true">≈</span> Kayak</li>
+        </ul>
+      </div>
+      <div class="hero-art" aria-label="People enjoying biking, walking, hiking, kayaking, and winter activities in the mountains">
+        <img src="https://terry77075.github.io/app-downloads/outabit/assets/outabit-artwork-biking.png" alt="Inclusive outdoor scene with people biking, walking, hiking, kayaking, and skiing beneath the outabit logo">
+        <div class="hero-caption"><span>One outing at a time</span><strong>Make it yours</strong></div>
+      </div>
+    </section>
+
+    <section class="manifesto" aria-labelledby="manifesto-title">
+      <p class="section-kicker">A kinder kind of activity app</p>
+      <h2 id="manifesto-title">No leaderboard. No pressure.<br><span>Just your next reason to head out.</span></h2>
+      <p>Choose the activity that fits the day. Set a personal goal by distance or active time, then let outabit keep the useful details together.</p>
+    </section>
+
+    <section class="walkthrough" id="how-it-works" aria-labelledby="walkthrough-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">A simple rhythm</p>
+          <h2 id="walkthrough-title">From idea to outdoor memory.</h2>
+        </div>
+        <p>outabit is built to stay out of the way while you are outside—and be helpful when you look back.</p>
+      </div>
+
+      <div class="journey">
+        <ol class="journey-steps">
+          <li class="is-active" data-step="1">
+            <span class="step-number">01</span>
+            <div><h3>Pick your way outside</h3><p>Start with biking, walking, hiking, or kayaking.</p></div>
+          </li>
+          <li data-step="2">
+            <span class="step-number">02</span>
+            <div><h3>Choose a goal that fits today</h3><p>Use distance or active time. Your goal is personal and stays in your control.</p></div>
+          </li>
+          <li data-step="3">
+            <span class="step-number">03</span>
+            <div><h3>Keep the route and the moment</h3><p>Build a route history, track your bike odometer, and share the outdoor memories worth keeping.</p></div>
+          </li>
+        </ol>
+
+        <div class="route-visual" aria-label="Illustration of a winding outdoor route">
+          <div class="sun" aria-hidden="true"></div>
+          <div class="ridge ridge-back" aria-hidden="true"></div>
+          <div class="ridge ridge-front" aria-hidden="true"></div>
+          <svg viewBox="0 0 560 410" role="img" aria-label="A relaxed route winding through a green landscape">
+            <path class="route-shadow" d="M58 345 C135 270 163 332 232 249 S338 178 389 231 S450 200 510 68"/>
+            <path class="route-line" d="M58 345 C135 270 163 332 232 249 S338 178 389 231 S450 200 510 68"/>
+            <circle class="route-start" cx="58" cy="345" r="10"/>
+            <g class="route-pin" transform="translate(496 43)"><path d="M14 0C6.3 0 0 6.3 0 14c0 10.5 14 25 14 25s14-14.5 14-25C28 6.3 21.7 0 14 0Z"/><circle cx="14" cy="14" r="5"/></g>
+          </svg>
+          <div class="route-label"><span>Today’s plan</span><strong>45 active minutes</strong><small>Change it whenever you like</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="details" aria-labelledby="details-title">
+      <div class="details-lede">
+        <p class="section-kicker">The useful details</p>
+        <h2 id="details-title">A record of where your time outside takes you.</h2>
+        <p>Come back to the routes, milestones, and memories that matter—without turning every outing into a competition.</p>
+      </div>
+      <div class="details-list">
+        <article>
+          <span class="detail-icon" aria-hidden="true">⌁</span>
+          <div><h3>Route history</h3><p>See the paths you have taken and revisit the outings you enjoyed.</p></div>
+        </article>
+        <article>
+          <span class="detail-icon" aria-hidden="true">◉</span>
+          <div><h3>Bike odometer</h3><p>Keep a practical running record of the distance on your bike.</p></div>
+        </article>
+        <article>
+          <span class="detail-icon" aria-hidden="true">✦</span>
+          <div><h3>Outdoor memories</h3><p>Share the moments that make getting outside feel worth it.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="tutorials" id="tutorials" aria-labelledby="tutorials-title">
+      <div class="section-heading light-heading">
+        <div>
+          <p class="section-kicker">Learn at a glance</p>
+          <h2 id="tutorials-title">Short guides are on the way.</h2>
+        </div>
+        <p>These video spaces show how tutorials could live on the final site. They are intentionally non-playable in this preview.</p>
+      </div>
+      <div class="video-row">
+        <article class="video-placeholder">
+          <span class="coming-soon">Video coming soon</span>
+          <div class="play-mark" aria-hidden="true">▶</div>
+          <div><p>Start here</p><h3>Plan your first outing</h3><span>Goals, activities, and a comfortable pace</span></div>
+        </article>
+        <article class="video-placeholder video-alt">
+          <span class="coming-soon">Video coming soon</span>
+          <div class="play-mark" aria-hidden="true">▶</div>
+          <div><p>Look back</p><h3>Find a route again</h3><span>Route history and outdoor memories</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="community" id="community" aria-labelledby="community-title">
+      <div class="community-copy">
+        <p class="section-kicker">A place to compare notes—not scores</p>
+        <h2 id="community-title">The outabit community is taking shape.</h2>
+        <p>Follow along for updates, share what is working, and help make the beta more useful for everyday time outside.</p>
+      </div>
+      <div class="community-links">
+        <a href="https://www.facebook.com/groups/2170004987221418" target="_blank" rel="noopener noreferrer"><span><small>Private Facebook group</small><strong>Join the conversation</strong></span><b aria-hidden="true">↗</b></a>
+        <a href="https://www.facebook.com/profile.php?id=61595824941541" target="_blank" rel="noopener noreferrer"><span><small>Public Facebook Page</small><strong>Follow outabit updates</strong></span><b aria-hidden="true">↗</b></a>
+      </div>
+    </section>
+
+    <section class="final-cta" aria-labelledby="final-title">
+      <p class="section-kicker">Ready when you are</p>
+      <h2 id="final-title">Your next favorite route<br>might start with a small goal.</h2>
+      <a class="button button-light" href="mailto:support@outabit.com?subject=outabit%20beta%20access%20request&amp;body=Hi%20outabit%20team%2C%0A%0AI%27d%20like%20to%20request%20beta%20access.%0A%0AName%3A%0ADevice%3A%0AFavorite%20outdoor%20activity%3A%0A">Request beta access <span aria-hidden="true">→</span></a>
+      <p>Android beta · Requests are reviewed by the outabit team</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand brand-crop footer-brand"><img src="https://terry77075.github.io/app-downloads/outabit/assets/outabit-logo-light-background.png" alt="outabit"></div>
+    <p>Get outside a bit. Keep the good parts.</p>
+    <div class="footer-links"><a href="mailto:support@outabit.com">support@outabit.com</a><a href="#top">Back to top ↑</a></div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
