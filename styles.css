@@ -368,3 +368,28 @@ footer p { margin: 0; }
   .device-options { grid-template-columns: 1fr; }
   .device-options label { justify-content: flex-start; }
 }
+
+
+/* Future customization highlight */
+.details-list .coming-feature {
+  margin-top: 1.25rem;
+  padding: 1.25rem;
+  border: 2px solid rgba(8,45,75,.16);
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(255,211,90,.23), rgba(116,199,239,.18));
+}
+.details-list .coming-feature .detail-icon { background: var(--yellow); color: var(--navy-deep); }
+.coming-feature-label {
+  display: inline-flex;
+  margin-bottom: .45rem;
+  padding: .26rem .52rem;
+  border-radius: 999px;
+  background: var(--navy);
+  color: white;
+  font-size: .66rem;
+  font-weight: 950;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+.details-list .coming-feature h3 { margin-bottom: .45rem; }
+.details-list .coming-history-note { margin-top: .45rem; color: var(--navy); font-weight: 800; }
