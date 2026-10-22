@@ -426,3 +426,12 @@ footer p { margin: 0; }
 .beta-platform a:focus-visible, .beta-platform summary:focus-visible { outline: 3px solid var(--green-deep); outline-offset: 4px; }
 .beta-updates-footer { margin-top: 1.5rem; color: var(--muted); }
 @media (max-width: 760px) { .beta-platforms { grid-template-columns: minmax(0, 1fr); } }
+
+/* Independent native disclosures keep device information compact and keyboard accessible. */
+.beta-platforms { align-items: start; }
+details.beta-platform { padding: 0; }
+.beta-platform > summary { min-height: 64px; padding: 1.25rem; cursor: pointer; color: var(--navy); font-weight: 800; }
+.beta-platform > summary h3 { display: inline; margin: 0; font-size: 1.65rem; }
+.beta-platform > summary:hover { background: var(--sky-soft); border-radius: var(--radius); }
+.beta-platform > summary:focus-visible { outline: 3px solid var(--green-deep); outline-offset: 4px; border-radius: var(--radius); }
+.beta-platform-content { padding: 0 clamp(1.25rem, 3vw, 2rem) clamp(1.25rem, 3vw, 2rem); }

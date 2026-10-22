@@ -46,7 +46,7 @@ def render(data, publish=False):
             raise ValueError('Unverified release record')
         available = [r for r in releases if r['status'] == 'available']
         development = [r for r in releases if r['status'] == 'development']
-        out += f'<section class="beta-platform" aria-labelledby="beta-{esc(platform["id"])}"><h3 id="beta-{esc(platform["id"])}">{esc(platform["label"])}</h3>'
+        out += f'<details class="beta-platform"><summary><h3 id="beta-{esc(platform["id"])}">{esc(platform["label"])}</h3></summary><div class="beta-platform-content">'
         out += release_card(available[0]) if available else '<p>Release details awaiting verification.</p>'
         install = platform['installation']
         out += '<h4>Install or update</h4><p>' + esc(install['summary']) + '</p><ol>' + ''.join('<li>'+esc(step)+'</li>' for step in install['steps']) + '</ol>'
@@ -55,7 +55,7 @@ def render(data, publish=False):
             out += '<h4>In development</h4>' + ''.join(release_card(r) for r in development)
         if len(available) > 1:
             out += '<details><summary>Earlier builds</summary>' + ''.join(release_card(r) for r in available[1:]) + '</details>'
-        out += '</section>'
+        out += '</div></details>'
     out += '</div><p class="beta-updates-footer">Found a problem? Tell us your device, app build, what happened, and what you expected. Please do not include private route or location data unless needed and requested. <a href="mailto:support@outabit.com">Contact support</a>.</p></section>'
     return out
 
