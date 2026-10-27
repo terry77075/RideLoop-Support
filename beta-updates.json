@@ -18,6 +18,33 @@
       },
       "releases": [
         {
+          "label": "v32 — version 1.1 — build 2026101232",
+          "buildOrder": 32,
+          "date": "2026-10-27",
+          "status": "available",
+          "verified": true,
+          "added": [
+            "A dedicated Lap Dashboard with a neutral Time or Distance comparison, lap history wheel and optional automatic focus after recording a lap.",
+            "Six coordinated appearance palettes with live dashboard previews and a dashboard long-press shortcut to Appearance.",
+            "Clearer Screen 1, Lap Dashboard, Digital Cluster and Map dashboard layouts with larger speed readings and aligned Trip and Odometer values."
+          ],
+          "fixed": [
+            "Sleeping bicycle sensors no longer hold one connection attempt indefinitely; bounded attempts keep retrying and the generic disconnected warning waits two minutes while the amber indicator remains visible.",
+            "History and Trip reports now target support@outabit.com.",
+            "Finish has a safe Cancel path, dashboard controls have more forgiving touch areas, and routine continuation or startup sensor notices can be acknowledged."
+          ],
+          "knownIssues": [
+            "The green return arrow can overlap the bottom map legend on the Map & Digital Dashboard.",
+            "The new sleeping-sensor retry behavior passed automated tests but has not yet been validated with a sleeping physical sensor on this build."
+          ],
+          "testFocus": [
+            "Start an outing while the bicycle sensor is asleep, then wake it by turning the wheel within two minutes; confirm the sensor changes from amber to green and begins reading.",
+            "Review Screens 1 through 4 in portrait and landscape, especially speed, Trip and Odometer alignment and long readings.",
+            "Press Lap with automatic focus on and off, then check the neutral reference switch and lap-history wheel."
+          ],
+          "notesUrl": "release-notes.html#android-v32"
+        },
+        {
           "label": "Build 54",
           "buildOrder": 54,
           "date": "2026-10-21",
