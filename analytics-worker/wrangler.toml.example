@@ -1,0 +1,11 @@
+name = "outabit-analytics"
+main = "worker.mjs"
+compatibility_date = "2026-10-29"
+
+[[d1_databases]]
+binding = "ANALYTICS_DB"
+database_name = "outabit-analytics"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+
+[vars]
+ALLOWED_ORIGINS = "https://outabit.com,https://www.outabit.com"
