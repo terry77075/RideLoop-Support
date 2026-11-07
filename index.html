@@ -87,39 +87,47 @@
           <div class="beta-platform-content">
             <article class="beta-release">
               <span class="beta-status beta-status-available">Available to beta testers</span>
-              <h4>v32 — version 1.1 — build 2026101232</h4>
-              <p class="beta-release-meta">Released: <time datetime="2026-10-27">2026-10-27</time></p>
+              <h4>v39 - version 1.3 - build 2026101239</h4>
+              <p class="beta-release-meta">Released: <time datetime="2026-11-07">2026-11-07</time></p>
               <h5>What's new</h5>
               <ul>
-                <li>A dedicated Lap Dashboard with a neutral Time or Distance reference, lap-history wheel and optional automatic focus after recording a lap.</li>
-                <li>Six coordinated appearance palettes with live dashboard previews and an Appearance long-press shortcut.</li>
-                <li>Clearer activity dashboards with larger speed readings and aligned Trip and Odometer values.</li>
+                <li>Explicit Outdoor bicycle and Stationary bike setup, with a cadence sensor required for stationary tracking.</li>
+                <li>Per-bike live calibration that tolerates normal cadence variation and lets the estimated speed match the bike console.</li>
+                <li>A stationary dashboard with estimated speed and trip distance, odometer, cadence, active time, and sensor status without GPS-only features.</li>
+                <li>Compact Active/Inactive bike controls that preserve each bike's settings, odometer, and history.</li>
               </ul>
               <h5>Fixes</h5>
               <ul>
-                <li>Sleeping bicycle sensors no longer hold one connection attempt indefinitely; bounded attempts keep retrying and the generic disconnected warning waits two minutes.</li>
-                <li>History and Trip reports now target support@outabit.com.</li>
-                <li>Finish has a safe Cancel path, controls have more forgiving touch areas, and routine continuation or startup sensor notices can be acknowledged.</li>
+                <li>Stopped cadence now returns to zero instead of retaining the last RPM.</li>
+                <li>Stationary active time now stops at the cadence-zero cutoff rather than continuing for roughly another 30 seconds.</li>
+                <li>Calibration and activity estimates now use the same short cadence average, while manual pause, disconnects, recovery, and outdoor rides remain protected.</li>
               </ul>
               <h5>Known issues</h5>
               <ul>
-                <li>The green return arrow can overlap the bottom map legend on the Map &amp; Digital Dashboard.</li>
-                <li>The new sleeping-sensor retry behavior passed automated tests but still needs a sleeping physical-sensor test on this build.</li>
+                <li>Speed and distance are estimates based on each stationary bike's calibration.</li>
+                <li>The exact signed v39 package passed automated and package checks but still needs an attended first launch and stationary-sensor ride on a physical phone.</li>
               </ul>
               <h5>Please help test</h5>
               <ul>
-                <li>Start with the bicycle sensor asleep, wake it within two minutes, and confirm the indicator changes from amber to green and readings begin.</li>
-                <li>Review Screens 1 through 4 in portrait and landscape, especially speed, Trip and Odometer alignment.</li>
-                <li>Press Lap with automatic focus on and off, then check the neutral reference and lap-history wheel.</li>
+                <li>Calibrate a stationary bike against its console, then compare the same cadence and estimated speed during an activity.</li>
+                <li>Stop pedaling and confirm RPM and active time stop together; resume and confirm both continue normally.</li>
+                <li>Mark a bike inactive and confirm it is hidden from ride selection without losing its settings or odometer.</li>
               </ul>
-              <p><a href="release-notes.html#android-v32">Full release notes</a></p>
+              <p><a href="release-notes.html#android-v39">Full release notes</a></p>
             </article>
             <h4>Install or update</h4>
-            <p>Ask the outabit team for beta access and the official Android installation instructions.</p>
-            <ol><li>New tester? Request beta access below. Use only the official installer and instructions provided by the outabit team.</li><li>Already testing? Install the new beta over your existing beta app. Do not uninstall first, as this can remove local outings and settings.</li><li>Keep Android security protections enabled. Stop and contact support if you see an unexpected signing or package mismatch.</li></ol>
-            <p><a href="#beta-request">Request beta access</a></p>
+            <p>Use the official Android install page and fixed GitHub download.</p>
+            <ol><li>Download only from the official install page.</li><li>Install the new beta over your existing beta app. Do not uninstall first, as this can remove local outings and settings.</li><li>Keep Android security protections enabled. Stop and contact support if you see an unexpected signing or package mismatch.</li></ol>
+            <p><a href="install.html">Open Android installation instructions</a></p>
             <details>
               <summary>Earlier builds</summary>
+              <article class="beta-release">
+                <span class="beta-status beta-status-available">Earlier beta</span>
+                <h4>v32 - version 1.1 - build 2026101232</h4>
+                <p class="beta-release-meta">Released: <time datetime="2026-10-27">2026-10-27</time></p>
+                <p>Lap Dashboard, appearance palettes, refined activity dashboards, and bounded bicycle-sensor reconnects.</p>
+                <p><a href="release-notes.html#android-v32">Full release notes</a></p>
+              </article>
               <article class="beta-release">
                 <span class="beta-status beta-status-available">Earlier beta</span>
                 <h4>v26 — version 1.1 — build 2026101226</h4>
